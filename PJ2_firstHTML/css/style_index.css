@@ -1,0 +1,14 @@
+p {
+  color: red;
+  font-family: "华文仿宋";
+
+}
+img{
+  width: 100px;
+  height: 100px;
+}
+
+a {
+  color: grey;
+  text-decoration: line-through;
+}

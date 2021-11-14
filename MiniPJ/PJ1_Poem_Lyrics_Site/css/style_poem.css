@@ -1,0 +1,27 @@
+.songTitle {
+  font-size: 40px;
+  text-align: center;
+  z-index: 10;
+}
+
+.author {
+  text-align: right;
+  font-size: 18px;
+  color: blue;
+  z-index: 10;
+}
+
+.poem {
+  text-align: center;
+  font-size: 16px;
+  z-index: 10;
+}
+
+body{
+  background-image:linear-gradient(rgba(255, 255, 255, 1),
+  rgba(0, 255, 255, 0.3));
+}
+
+/* .bkimage {
+  z-index: -1;
+} */

@@ -1,0 +1,22 @@
+body{
+  margin:0;
+}
+
+.box1{
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+
+  padding:20px;
+  width:50%;
+}
+
+.text{
+  color: blue;
+
+  border-color: red;
+  border-width: 1px;
+  border-style: dashed;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
