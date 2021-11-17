@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Interface Art</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="lib\p5.js"></script>
+  </head>
+  <body>
+    <h1>Doge the Bombs!</h1>
+
+      <div id="canvasContainer"></div>
+      <div id=levelOfDiff>
+        Select level here:
+        <input type="radio" id="level1" name="levels" value="1" checked>
+        <label for="level1">Easy</label>
+        <input type="radio" id="level2" name="levels" value="2">
+        <label for="level2">Normal</label>
+        <input type="radio" id="level3" name="levels" value="3">
+        <label for="level2">Hard</label>
+
+      </div>
+      <div>
+        <input type="range" id="playerRange" min="0" max="100" step="1">
+        <label for="playerRange">Control your player!</label>
+      </div>
+
+      <script type="text/javascript" src="scripts/index.js"></script>
+      <p>level of difficulty will be updated when respwan</p>
+
+
+      <script type="text/javascript" src="scripts/index.js"></script>
+
+  </body>
+</html>
