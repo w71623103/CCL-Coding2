@@ -12,13 +12,22 @@ let stringPic = [];
 let string;
 
 let modifier = [];
+let sounds = [];
 
 function preload(){
   backGuitar = loadImage("assets/images/guitar4.png");
   for (let i = 1; i <= 5; i++) {
     let path = "assets/images/string/string"+i+".png";
     stringPic.push(loadImage(path));
+  }
 
+  for(let i = 6; i >= 1; --i){
+    let subSound = [];
+    sounds.push(subSound);
+    for(let j = 0; j <= 4; ++j){
+      let path = "assets/audio/string/"+i+"-"+j+".mp3";
+      sounds[6-i].push(loadSound(path));
+    }
   }
 }
 
@@ -135,9 +144,10 @@ class GuitarString{
 
   makeSound(){
     console.log("string"+(this.seq+1)+"isplaying Sound");
-    let path = "assets/audio/string/"+(6-this.seq)+"-"+modifier[this.seq].value+".m4a";
-    console.log(path);
+    //let path = "assets/audio/string/"+(6-this.seq)+"-"+modifier[this.seq].value+".m4a";
+    //console.log(path);
     //let stringSound = loadSound(path);
     //stringSound.play();
+    sounds[this.seq][modifier[this.seq].value].play();
   }
 }
