@@ -1,47 +1,86 @@
-#string1{
-  width:130px;
+body{
+  margin:0;
+}
+.stringContainer{
   position: absolute;
-  left: 170px; top:188px;
+  left: 435px;
+}
+
+#astring1{
+  top:261px;
+}
+
+#astring2{
+  top:275px;
+}
+
+#astring3{
+  top:289px;
+}
+
+#astring4{
+  top:303px;
+}
+
+#astring5{
+  top:317px;
+}
+
+#astring6{
+  top:331px;
+}
+#string1{
+  /* width:130px; */
+  /* position: absolute; */
+  /* left: 245px;  */
+  top:266px;
   z-index: 3;
 }
 
 #string2{
-  width:130px;
-  position: absolute;
-  left: 170px; top:197px;
+  /* width:130px; */
+  /* position: absolute; */
+  /* left: 170px;  */
+  top:280px;
   z-index: 3;
 }
 
 #string3{
-  width:130px;
-  position: absolute;
-  left: 170px; top:205px;
+  /* width:130px; */
+  /* position: absolute; */
+  /* left: 170px;  */
+  top:294px;
   z-index: 3;
 }
 #string4{
-  width:130px;
-  position: absolute;
-  left: 170px; top:214px;
+  /* width:130px; */
+  /* position: absolute; */
+  /* left: 170px;  */
+  top:308px;
   z-index: 3;
 }
 #string5{
-  width:130px;
-  position: absolute;
-  left: 170px; top:223px;
+  /* width:130px; */
+  /* position: absolute; */
+  /* left: 170px;  */
+  top:322px;
   z-index: 3;
 }
 #string6{
-  width:130px;
-  position: absolute;
-  left: 170px; top:233px;
+  /* width:130px; */
+  /* position: absolute; */
+  /* left: 170px;  */
+  top:336px;
   z-index: 3;
 }
 
 .slider {
+  position: absolute;
+  left: 237px;
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
-  width: 100%; /* Full-width */
-  height: 3px; /* Specified height */
+  width: 196px; /* Full-width */
+  height: 6px; /* Specified height */
   background: #d3d3d3; /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
@@ -58,15 +97,15 @@
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 5px; /* Set a specific slider handle width */
-  height: 3px; /* Slider handle height */
+  width: 20px; /* Set a specific slider handle width */
+  height: 6px; /* Slider handle height */
   background: #04AA6D; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
-  width: 5px; /* Set a specific slider handle width */
-  height: 3px; /* Slider handle height */
+  width: 20px; /* Set a specific slider handle width */
+  height: 6px; /* Slider handle height */
   background: #04AA6D; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
