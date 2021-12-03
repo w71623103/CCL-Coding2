@@ -14,6 +14,8 @@ let string;
 let modifier = [];
 let sounds = [];
 
+let stringColMargin = 3;
+
 function preload(){
   backGuitar = loadImage("assets/images/guitar4.png");
   for (let i = 1; i <= 5; i++) {
@@ -50,7 +52,10 @@ function draw(){
 
 
   background(30);
+
   image(backGuitar,0,0);
+
+
   for(let i = 0; i < 6; ++i){
     strings[i].update();
   }
@@ -61,7 +66,7 @@ function draw(){
     if(mouseX > stringStartPos[0] && mouseX < stringStartPos[0]+stringColSiz[0])
     {
       for(let i = 0; i < 6; ++i){
-        if(mouseY > stringStartPos[1]+i*stringStep+i*stringColSiz[1] && mouseY < stringStartPos[1]+i*stringStep+(i+1)*stringColSiz[1]){
+        if(mouseY > stringStartPos[1]+i*stringStep+i*stringColSiz[1] - stringColMargin && mouseY < stringStartPos[1]+i*stringStep+(i+1)*stringColSiz[1]+stringColMargin){
           console.log("string" + (i+1) +"is touched");
           strings[i].shake();
         }
@@ -75,7 +80,7 @@ function stringExamine(){
   noFill();
   stroke("red");
   for(let i = 0; i < 6; ++i){
-    rect(stringStartPos[0],stringStartPos[1]+i*stringStep+i*stringColSiz[1],stringColSiz[0],stringColSiz[1]);
+    rect(stringStartPos[0],stringStartPos[1]+i*stringStep+i*stringColSiz[1]-stringColMargin,stringColSiz[0],stringColSiz[1]+2*stringColMargin);
   }
   pop();
 }
