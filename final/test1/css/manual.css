@@ -1,0 +1,53 @@
+.guitar{
+  z-index: 3;
+  position: absolute;
+  right:2%;
+  top: 5%;
+  font-family: "Verdana";
+  font-size: 32px;
+}
+.chordManual{
+  /* margin-top: 130px; */
+  margin-bottom: 230px;
+}
+
+.samples{
+  position:absolute;
+  left:10px;
+}
+
+#c{
+  position:absolute;
+  top:162px;
+}
+
+#g{
+  position:absolute;
+  top:409px;
+}
+
+#am{
+  position:absolute;
+  top:660px;
+}
+
+#f{
+  position:absolute;
+  top:907px;
+}
+
+#d{
+  position:absolute;
+  top:1163px;
+}
+
+#em{
+  position:absolute;
+  top:1415px;
+}
+
+.note{
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
