@@ -1,7 +1,8 @@
 let backGuitar;
-let imgW = 1000;
-let imgH = 412;
+let imgW = 1500;
+let imgH = 618;
 let w,h;
+// let canvas;
 
 let stringStartPos = [434,268];
 let stringColSiz = [750,6];
@@ -20,10 +21,13 @@ let stringColMargin = 5;
 // let shapeMakingTrackY = [];
 // let visualArray = [];
 
+//document.getElementById("manualLink").addEventListener("click", openManual());
+
+
 function preload(){
-  backGuitar = loadImage("assets/images/guitar4.png");
+  backGuitar = loadImage("../assets/images/guitar4.png");
   for (let i = 1; i <= 5; i++) {
-    let path = "assets/images/string/string"+i+".png";
+    let path = "../assets/images/string/string"+i+".png";
     stringPic.push(loadImage(path));
   }
 
@@ -31,7 +35,7 @@ function preload(){
     let subSound = [];
     sounds.push(subSound);
     for(let j = 0; j <= 4; ++j){
-      let path = "assets/audio/string/"+i+"-"+j+".mp3";
+      let path = "../assets/audio/string/"+i+"-"+j+".mp3";
       sounds[6-i].push(loadSound(path));
     }
   }
@@ -41,11 +45,12 @@ function setup(){
   for(let i = 0; i < 6; ++i){
     strings.push(new GuitarString(i));
   }
-  w = windowWidth;
+  w = windowWidth<1500? windowWidth:1500;
   h = (imgH/imgW)*w
   //canvas = createCanvas(w,h);
-  canvas = createCanvas(windowWidth-2,windowHeight-5);
-  //canvas.parent("canvasContainer");
+  // let canvas = createCanvas(windowWidth-2,windowHeight-5);
+  let canvas = createCanvas(w,h);
+  canvas.parent("canvasContainer");
 
   for(let i = 1; i <= 6; ++i){
     modifier.push(document.getElementById("string"+i));
@@ -103,6 +108,10 @@ function stringExamine(){
   pop();
 }
 
+function openManual(){
+  window.open('../manual','Manual','width=1600,height=400');
+
+}
 
 // function makeImgElm(p, i){
 //   let div = document.createElement("div");
@@ -267,32 +276,38 @@ function chord(name){
   }
 }
 
-class mouseShape{
-  constructor(xArray,yArray){
-    this.xArray = xArray;
-    this.yArray = yArray;
-    this.timer = 5;
-  }
+// class mouseShape{
+//   constructor(xArray,yArray){
+//     this.xArray = xArray;
+//     this.yArray = yArray;
+//     this.timer = 5;
+//   }
+//
+//   update(){
+//     if(this.timer >= 0){
+//       this.timer -= deltaTime;
+//       this.display();
+//     }
+//   }
+//
+//   display(){
+//     push();
+//     scale(1/this.timer,1/this.timer);
+//     noFill();
+//     stroke(random(0,255),random(0,255),random(0,255));
+//     beginShape(CLOSED);
+//     if(this.xArray.length >= this.yArray.length){
+//       for(let i = 0; i < this.yArray.length; ++i){
+//         vertex(this.xArray[i],this.yArray[i]);
+//       }
+//     }
+//     endShape();
+//     pop();
+//   }
+// }
 
-  update(){
-    if(this.timer >= 0){
-      this.timer -= deltaTime;
-      this.display();
-    }
-  }
-
-  display(){
-    push();
-    scale(1/this.timer,1/this.timer);
-    noFill();
-    stroke(random(0,255),random(0,255),random(0,255));
-    beginShape(CLOSED);
-    if(this.xArray.length >= this.yArray.length){
-      for(let i = 0; i < this.yArray.length; ++i){
-        vertex(this.xArray[i],this.yArray[i]);
-      }
-    }
-    endShape();
-    pop();
-  }
+function windowResized() {
+  w = windowWidth<1500? windowWidth:1500;
+  h = (imgH/imgW)*w
+  resizeCanvas(w, h);
 }
